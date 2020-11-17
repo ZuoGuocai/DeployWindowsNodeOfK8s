@@ -51,7 +51,7 @@ ID                                   | Virtual IPs      | Direct IP IDs
 bd6bd0ec-9de6-4850-9a19-3f2d448f30ad |  10.96.0.10      | 11fcf2c4-30ff-42bb-bb29-56a0d0612582 bdf93f5a-26b4-4c38-86c6-782f20ffed40
 
 
-PS C:\Users\Administrator> vfpctrl /port  cb9beaae-7389-4f78-8e5d-d0e1700245af /layer VNET_ENCAP_LAYER /group VNET_GROUP_ENCAP_IPV4_OUT /list-rule
+PS C:\Users\Administrator> vfpctrl /port  cb9beaae-7389-4f78-8e5d-d0e1700245af /layer VNET_ENCAP_LAYER /group VNET_GROUP_ENCAP_IPV4_OUT /list-rule | Select-Object -First 10
 
  ITEM LIST
 ===========
