@@ -33,4 +33,6 @@ Get-HnsNetwork |where{$_.name -eq "flannel.4096"}
 
 Get-HnsEndpoint |ft IPAddress,MACAddress,IsRemoteEndpoint,Policies
 
+get-netadapter
+get-vmnetworkadapter -all
 ```
