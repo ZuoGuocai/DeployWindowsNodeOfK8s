@@ -23,8 +23,13 @@ kubectl cluster-info dump|grep -i service-cluster-ip-range
 Windows 节点
 
 ```
-Get-Service -Name docker,kubelet,hns,rancher-wins
+Get-Service -Name docker,kubelet,hns,rancher-wins,containerd
 docker ps |findstr  flannel
+
+Get-Service  |Sort-Object status
+Get-Service  |Select-Object -Property Status
+Get-Service  |?{$_.Status -like 'Running'}
+
 
 
 hnsdiag list  endpoints
