@@ -29,6 +29,9 @@ docker ps |findstr  flannel
 Get-Service  |Sort-Object status
 Get-Service  |Select-Object -Property Status
 Get-Service  |?{$_.Status -like 'Running'}
+Get-Service   "n*" | ?{$_.Status -like 'Running'}
+Get-Service   "vm*"
+
 
 
 
