@@ -23,6 +23,8 @@ kubectl cluster-info dump|grep -i service-cluster-ip-range
 Windows 节点
 
 ```
+Get-Service -Name docker,kubelet,hns,rancher-wins
+
 
 hnsdiag list  endpoints
 
