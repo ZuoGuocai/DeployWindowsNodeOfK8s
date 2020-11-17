@@ -16,6 +16,9 @@ kubectl cluster-info dump|grep -i service-cluster-ip-range
 
 
 
+ip tuntap list
+ip  tunnel show
+ip -d link  show tunl0
 
 ```
 
