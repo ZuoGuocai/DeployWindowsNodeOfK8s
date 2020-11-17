@@ -32,6 +32,7 @@ Get-Service  |?{$_.Status -like 'Running'}
 Get-Service   "n*" | ?{$_.Status -like 'Running'}
 Get-Service   "vm*"
 
+Get-Service   "*RM","ssh*","EventLog","*license*"
 
 
 
