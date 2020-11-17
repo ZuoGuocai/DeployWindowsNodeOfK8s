@@ -24,6 +24,7 @@ Windows 节点
 
 ```
 Get-Service -Name docker,kubelet,hns,rancher-wins
+docker ps |findstr  flannel
 
 
 hnsdiag list  endpoints
