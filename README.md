@@ -42,7 +42,12 @@ FLANNEL_IPMASQ=true
 iptables -t nat --line-numbers -vnL POSTROUTING
 
 https://developer.aliyun.com/article/468460
+
+
 ```
+- nodeport 不能访问
+
+iptables -P FORWARD ACCEPT
 
 
 
