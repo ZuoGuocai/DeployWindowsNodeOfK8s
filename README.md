@@ -40,6 +40,7 @@ FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 
 iptables -t nat --line-numbers -vnL POSTROUTING
+iptables -S -t nat
 
 https://developer.aliyun.com/article/468460
 
