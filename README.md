@@ -5,6 +5,46 @@
 
 Linux 节点
 
+准备网段
+
+```
+export POD_SUBNET=10.100.0.1/16
+
+cat <<EOF > ./kubeadm-config.yaml
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+kubernetesVersion: v${1}
+imageRepository: registry.aliyuncs.com/k8sxio
+controlPlaneEndpoint: "${APISERVER_NAME}:6443"
+networking:
+  serviceSubnet: "10.96.0.0/16"
+  podSubnet: "${POD_SUBNET}"
+  dnsDomain: "cluster.local"
+EOF
+
+vi   kube-flannel.yml
+
+  net-conf.json: |
+    {
+      "Network": "10.100.0.1/16",
+      "Backend": {
+        "Type": "vxlan"
+      }
+    }
+
+
+cat /run/flannel/subnet.env
+FLANNEL_NETWORK=10.100.0.0/16
+FLANNEL_SUBNET=10.100.0.1/24
+FLANNEL_MTU=1450
+FLANNEL_IPMASQ=true
+
+iptables -t nat --line-numbers -vnL POSTROUTING
+```
+
+
+
+
 ```
 cat /run/flannel/subnet.env
 
