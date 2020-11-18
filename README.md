@@ -5,7 +5,7 @@
 
 Linux 节点
 
-准备网段
+- 准备网段
 
 ```
 export POD_SUBNET=10.100.0.1/16
