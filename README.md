@@ -130,6 +130,20 @@ PS C:\Users\Administrator> vfpctrl /port  cb9beaae-7389-4f78-8e5d-d0e1700245af /
 kubeadm reset
 
 
+WARNING: The names of some imported commands from the module 'hns' include unapproved verbs that might make them less 
+discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose 
+parameter. For a list of approved verbs, type Get-Verb.
+Invoke-HnsRequest : @{Error=找不到适配器。 ; ErrorCode=2151350278; Success=False}
+At C:\k\flannel\hns.psm1:233 char:16
++ ...      return Invoke-HnsRequest -Method POST -Type networks -Data $Json ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,Invoke-HNSRequest
+
+vEthernet(NIC1)--右键--配置--驱动--卸载
+
+
+
 Invoke-HnsRequest : @{Error=已存在具有此名称的网络。 ; ErrorCode=2151350288; Success=False}
 At C:\k\flannel\hns.psm1:233 char:16
 + ...      return Invoke-HnsRequest -Method POST -Type networks -Data $Json ...
