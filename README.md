@@ -130,6 +130,19 @@ PS C:\Users\Administrator> vfpctrl /port  cb9beaae-7389-4f78-8e5d-d0e1700245af /
 kubeadm reset
 
 
+Invoke-HnsRequest : @{Error=已存在具有此名称的网络。 ; ErrorCode=2151350288; Success=False}
+At C:\k\flannel\hns.psm1:233 char:16
++ ...      return Invoke-HnsRequest -Method POST -Type networks -Data $Json ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,Invoke-HNSRequest
+
+
+Get-NetIPAddress | Format-Table
+ 
+Get-HNSNetwork | Remove-HNSNetwork
+
+https://github.com/Microsoft/SDN/issues/238
 ```
 
 
