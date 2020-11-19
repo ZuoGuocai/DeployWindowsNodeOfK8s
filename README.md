@@ -147,3 +147,20 @@ eventvwr
 winver
 ```
 
+- 查看补丁情况
+```
+wmic qfe GET hotfixid
+
+systeminfo
+
+```
+
+
+- 查看重启情况
+
+```
+systeminfo 
+
+```
+
+
