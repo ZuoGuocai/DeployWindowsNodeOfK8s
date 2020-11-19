@@ -131,3 +131,19 @@ kubeadm reset
 
 
 ```
+
+
+
+- 查看日志
+
+```
+eventvwr
+
+```
+
+- 查看版本
+
+```
+winver
+```
+
