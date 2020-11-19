@@ -124,7 +124,10 @@ PS C:\Users\Administrator> vfpctrl /port  cb9beaae-7389-4f78-8e5d-d0e1700245af /
 
 
 
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp [::1]:10248: connectex: No connection could be made because the target machine actively refused it.
 
+
+kubeadm reset
 
 
 ```
