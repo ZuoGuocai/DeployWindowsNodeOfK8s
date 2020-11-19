@@ -162,5 +162,10 @@ systeminfo
 systeminfo 
 
 ```
-
+- 分析网络
+```
+ipconfig /all
+tracert
+route print
+```
 
