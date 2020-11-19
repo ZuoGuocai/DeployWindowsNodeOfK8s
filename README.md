@@ -85,6 +85,9 @@ Get-Service   "vm*"
 
 Get-Service   "*RM","ssh*","EventLog","*license*"
 
+Stop-Service kubelet
+docker ps -aq | ForEach-Object { docker stop -t 1 $_ } | ForEach-Object { docker rm -vf $_ }
+
 
 
 hnsdiag list  endpoints
