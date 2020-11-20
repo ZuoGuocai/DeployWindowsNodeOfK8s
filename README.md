@@ -28,9 +28,15 @@ vi   kube-flannel.yml
     {
       "Network": "10.100.0.1/16",
       "Backend": {
-        "Type": "vxlan"
+        "Type": "vxlan",
+        "VNI" : 4096,
+        "Port": 4789
+
       }
     }
+
+
+kubectl cluster-info dump |grep podCIDR
 
 
 cat /run/flannel/subnet.env
